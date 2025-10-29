@@ -2,37 +2,23 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Петербургский чайный синдикат — авторский чай в стильной упаковке</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Уникальные купажи с травами, ягодами и чёрным чаем. Ручная сборка. Стильная упаковка. Петербургский чайный синдикат — вкус, который запоминается." />
-  <meta name="keywords" content="чай, травяной чай, петербургский чай, чай в тубусах, авторский чай, купить чай, чайный магазин" />
-  <meta name="author" content="Петербургский чайный синдикат" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Петербургский чайный синдикат" />
-  <meta property="og:description" content="Авторский чай с душой Петербурга — в стильной упаковке, с уникальными рецептами." />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Петербургский+чай" />
-  <meta property="og:url" content="https://your-github-page-url.com" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Петербургский чайный синдикат" />
-  <meta name="twitter:description" content="Чай ручной работы из Петербурга — вкус, стиль, атмосфера." />
-  <meta name="twitter:image" content="https://via.placeholder.com/1200x630?text=Чай" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/921/921347.png" type="image/png" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Юбилейный вишлист — 12 ноября 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #1e1e1e;
-      --accent: #cda56b;
-      --text: #ffffff;
-      --card-bg: #2c2c2c;
-      --radius: 16px;
+      --bg: #0f172a;
+      --bg-alt: rgba(148, 163, 184, 0.05);
+      --accent: #f97316;
+      --accent-soft: rgba(249, 115, 22, 0.12);
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --card-border: rgba(148, 163, 184, 0.25);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.6);
     }
 
     * {
@@ -41,297 +27,302 @@
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
+      font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.35), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.2), transparent 50%),
+                  var(--bg);
       color: var(--text);
-      scroll-behavior: smooth;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
     }
 
     header {
-      background: #000;
-      padding: 20px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 24px 12px;
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
       align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    header h1 {
-      font-size: 24px;
-      margin: 0;
+    .logo {
+      font-weight: 700;
+      font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       color: var(--accent);
     }
 
-    nav a {
-      color: var(--text);
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 16px;
+    .countdown {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
     }
 
     .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: url('https://via.placeholder.com/1920x600?text=Чай+и+Питер') center/cover no-repeat;
-      animation: fadeIn 1s ease-in;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 24px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: center;
+      gap: 40px;
     }
 
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
+    .hero-copy h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.2rem, 1.2rem + 2.8vw, 3.4rem);
+      font-weight: 700;
     }
 
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: auto;
+    .hero-copy p {
+      margin: 0 0 24px;
+      color: var(--text-muted);
+      font-size: 1.05rem;
     }
 
-    .section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-      animation: fadeUp 1s ease-in;
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 22px;
+      border-radius: var(--radius-md);
+      background: var(--bg-alt);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
-    .section h3 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 40px;
-      color: var(--accent);
+    .grid {
+      max-width: 1100px;
+      margin: 0 auto 90px;
+      padding: 0 24px;
+      display: grid;
+      gap: 26px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
-    .tea-card {
-      display: flex;
-      flex-wrap: wrap;
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      overflow: hidden;
-      margin-bottom: 40px;
-    }
-
-    .tea-card img {
-      width: 300px;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .tea-info {
-      flex: 1;
-      padding: 20px;
-    }
-
-    .tea-info h4 {
-      color: var(--accent);
-      margin-top: 0;
-      font-size: 24px;
-    }
-
-    .tea-info p {
-      margin: 10px 0;
-      line-height: 1.5;
-    }
-
-    .tea-info ul {
-      padding-left: 20px;
-    }
-
-    .buy-buttons {
-      margin-top: 20px;
-    }
-
-    .buy-buttons a {
-      display: inline-block;
-      margin-right: 10px;
-      background: var(--accent);
-      color: #000;
-      padding: 10px 18px;
-      border-radius: var(--radius);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .form-container {
-      max-width: 600px;
-      margin: auto;
-    }
-
-    form {
+    .card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.65));
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      isolation: isolate;
     }
 
-    input, textarea, button {
-      padding: 14px;
-      border: none;
-      border-radius: var(--radius);
-      background: #333;
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), transparent 60%);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 35px 60px -18px rgba(15, 23, 42, 0.7);
+    }
+
+    .card:hover::after {
+      opacity: 1;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--text-muted);
+    }
+
+    .card small {
+      color: var(--text-muted);
+      opacity: 0.8;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-self: flex-start;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.12);
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    .cta {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cta a {
+      flex: 1 1 140px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(249, 115, 22, 0.35);
+      background: rgba(249, 115, 22, 0.18);
       color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease, border-color 0.3s ease;
     }
 
-    button {
-      background: var(--accent);
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
+    .cta a.secondary {
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.4);
     }
 
-    .video {
-      text-align: center;
-    }
-
-    .video iframe {
-      max-width: 100%;
-      border-radius: var(--radius);
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    .cta a:hover {
+      background: rgba(249, 115, 22, 0.28);
+      border-color: rgba(249, 115, 22, 0.55);
     }
 
     footer {
+      max-width: 1100px;
+      margin: 40px auto 32px;
+      padding: 0 24px;
+      color: var(--text-muted);
       text-align: center;
-      padding: 30px;
-      background: #111;
-      color: #777;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 768px) {
-      .tea-card {
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .cta {
         flex-direction: column;
       }
-
-      .tea-card img {
-        width: 100%;
-      }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">Wishlist 35</div>
+    <div class="countdown">До праздника: 12 ноября 2025</div>
+  </header>
 
-<header>
-  <h1>Петербургский чайный синдикат</h1>
-  <nav>
-    <a href="#products">Чаи</a>
-    <a href="#video">Видео</a>
-    <a href="#contact">Контакты</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>Настоящий чай с душой Петербурга</h2>
-  <p>Авторские купажи, стильные тубусы и неповторимый вкус северной столицы</p>
-</section>
-
-<section class="section" id="products">
-  <h3>Наши премиальные купажи</h3>
-
-  <!-- ЧАЙ 1 -->
-  <div class="tea-card">
-    <img src="https://via.placeholder.com/806x1074?text=Северный+вечер" alt="Северный вечер">
-    <div class="tea-info">
-      <h4>Северный вечер</h4>
-      <p><strong>Состав:</strong> чай Ассам, липа, донник, лист малины и смородины, лаванда, бузина.</p>
-      <p><strong>Вкус:</strong> тёплый, расслабляющий, с нотками цветочного уюта. Лучший спутник долгого вечера.</p>
-      <p><strong>Заваривание:</strong></p>
-      <ul>
-        <li>90–95°C, 5–7 минут</li>
-        <li>1 ч.л. на 250 мл воды</li>
-      </ul>
-      <div class="buy-buttons">
-        <a href="https://ozon.ru" target="_blank">Ozon</a>
-        <a href="https://wildberries.ru" target="_blank">Wildberries</a>
-      </div>
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="hero-badge">35-й день рождения · 12.11.2025</div>
+      <h1>Юбилейный вишлист</h1>
+      <p>
+        В этом году мне исполняется 35 — хочу отметить круглый юбилей яркими впечатлениями и полезными подарками.
+        Ниже собрал всё, что вдохновляет прямо сейчас. Клик по кнопке откроет страницу товара или сбор средств — ссылки можно будет подставить позже.
+      </p>
     </div>
-  </div>
-
-  <!-- ЧАЙ 2 -->
-  <div class="tea-card">
-    <img src="https://via.placeholder.com/806x1074?text=Петербургский+спецкупаж" alt="Петербургский спецкупаж">
-    <div class="tea-info">
-      <h4>Петербургский спецкупаж</h4>
-      <p><strong>Состав:</strong> чёрный чай, ягоды, шиповник, бергамот.</p>
-      <p><strong>Вкус:</strong> насыщенный, благородный, с лёгкой кислинкой и бодрящими нотами цитруса.</p>
-      <p><strong>Заваривание:</strong></p>
-      <ul>
-        <li>95°C, 4–5 минут</li>
-        <li>1 ч.л. на 200 мл воды</li>
-      </ul>
-      <div class="buy-buttons">
-        <a href="https://ozon.ru" target="_blank">Ozon</a>
-        <a href="https://wildberries.ru" target="_blank">Wildberries</a>
-      </div>
+    <div class="hero-image" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1521198022873-af0f772bf653?auto=format&fit=crop&w=900&q=80" alt="Свечи на праздничном торте" style="width:100%;max-width:420px;border-radius:var(--radius-lg);box-shadow:var(--shadow);border:1px solid var(--card-border);" />
     </div>
-  </div>
+  </section>
 
-  <!-- ЧАЙ 3 -->
-  <div class="tea-card">
-    <img src="https://via.placeholder.com/806x1074?text=Яблочный+травяной" alt="Яблочный сбор">
-    <div class="tea-info">
-      <h4>Яблочный травяной сбор</h4>
-      <p><strong>Состав:</strong> яблоко, чабрец, календула, каркаде.</p>
-      <p><strong>Вкус:</strong> фруктово-травяной, лёгкий и освежающий. Хорош как в горячем, так и холодном виде.</p>
-      <p><strong>Заваривание:</strong></p>
-      <ul>
-        <li>90°C, 8–10 минут</li>
-        <li>1–2 ч.л. на 300 мл воды</li>
-      </ul>
-      <div class="buy-buttons">
-        <a href="https://ozon.ru" target="_blank">Ozon</a>
-        <a href="https://wildberries.ru" target="_blank">Wildberries</a>
+  <section class="grid" aria-label="Список желанных подарков">
+    <article class="card">
+      <span class="tag">Тренировки</span>
+      <h2>Деревянный манекен Вин Чун</h2>
+      <p>Поможет отточить технику и двигаться дальше в практике. Ищу качественную модель из массива дерева.</p>
+      <div class="cta">
+        <a href="#" aria-label="Ссылка на деревянный манекен">Добавить ссылку на магазин</a>
       </div>
-    </div>
-  </div>
-</section>
+    </article>
 
-<section class="section video" id="video">
-  <h3>Видео-обзор</h3>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/RW3e_cIYgL8" title="Tea" frameborder="0" allowfullscreen></iframe>
-</section>
+    <article class="card">
+      <span class="tag">Авто</span>
+      <h2>Мультируль для VW Polo 5 (рестайлинг, 2017)</h2>
+      <p>Хочу обновить интерьер авто и получить больше комфорта в дороге. Подойдёт оригинальный комплект.</p>
+      <div class="cta">
+        <a href="#" aria-label="Ссылка на мультируль">Добавить ссылку</a>
+      </div>
+    </article>
 
-<section class="section" id="contact">
-  <h3>Связаться с нами</h3>
-  <div class="form-container">
-    <form onsubmit="sendToTelegram(event)">
-      <input type="text" id="name" placeholder="Ваше имя" required>
-      <input type="tel" id="phone" placeholder="Телефон" required>
-      <textarea id="message" rows="4" placeholder="Сообщение" required></textarea>
-      <button type="submit">Отправить</button>
-    </form>
-  </div>
-</section>
+    <article class="card">
+      <span class="tag">Авто</span>
+      <h2>Штатная магнитола с BT и CarPlay</h2>
+      <p>Мечтаю о полноценной мультимедиа с поддержкой Apple CarPlay и Bluetooth, чтобы всё было «из коробки».</p>
+      <div class="cta">
+        <a href="#" aria-label="Ссылка на магнитолу">Добавить ссылку</a>
+      </div>
+    </article>
 
-<footer>
-  &copy; 2025 Петербургский чайный синдикат. Все права защищены.
-</footer>
+    <article class="card">
+      <span class="tag">Профессия</span>
+      <h2>Годовая лицензия WebStorm</h2>
+      <p>У меня уже есть аккаунт JetBrains — нужно просто продлить подписку на ещё один год.</p>
+      <div class="cta">
+        <a href="#" aria-label="Инструкция по лицензии WebStorm">Добавить ссылку на оформление</a>
+        <a class="secondary" href="#" aria-label="Отправить данные для лицензии">Добавить ссылку на перевод средств</a>
+      </div>
+    </article>
 
-<script>
-  function sendToTelegram(e) {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
-    const text = `📝 Новая заявка:\nИмя: ${name}\nТелефон: ${phone}\nСообщение: ${message}`;
-    const BOT_TOKEN = 'ВАШ_ТОКЕН'; // 🔁 Подставь свой
-    const CHAT_ID = 'ВАШ_CHAT_ID'; // 🔁 Подставь свой
+    <article class="card">
+      <span class="tag">Поддержка</span>
+      <h2>Вклад деньгами</h2>
+      <p>Если сомневаетесь, что подарить — перевод тоже сделает праздник особенным. Любая сумма в радость!</p>
+      <div class="cta">
+        <a href="#" aria-label="Ссылка на сбор средств">Добавить ссылку на сбор</a>
+      </div>
+    </article>
 
-    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ chat_id: CHAT_ID, text })
-    })
-    .then(res => res.ok ? alert("✅ Отправлено!") : alert("❌ Ошибка отправки"))
-    .catch(() => alert("⚠️ Ошибка соединения"));
-  }
-</script>
+    <article class="card">
+      <span class="tag">Свободный слот</span>
+      <h2>Идея от тебя</h2>
+      <p>Есть что-то, что идеально подходит? Добавь ссылку — я всегда рад сюрпризам и новым впечатлениям.</p>
+      <div class="cta">
+        <a href="#" aria-label="Добавить свою идею">Добавить ссылку</a>
+      </div>
+    </article>
 
+    <article class="card">
+      <span class="tag">Свободный слот</span>
+      <h2>Твой персональный подарок</h2>
+      <p>Оставляю место для творческого подхода: опыт, впечатление или предмет, который, по твоему мнению, мне нужен.</p>
+      <div class="cta">
+        <a href="#" aria-label="Добавить ссылку">Добавить ссылку</a>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    Спасибо, что делаете мой 35-й день рождения особенным. Любой подарок — повод встретиться и отпраздновать вместе!
+  </footer>
 </body>
 </html>
